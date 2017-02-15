@@ -9,7 +9,7 @@
 
 comparePI<-function(vstPIinput){
   print(summary(vstPIinput))
-  plot(sort(vstPIinput), xlab="Samples", ylab="PI (vst counts)", main="PI")
+  graphics::plot(sort(vstPIinput), xlab="Samples", ylab="PI (vst counts)", main="PI")
   #add plots comparing user data to general GTEx and TCGA data
   #add plots comparing user data to specific tissue match in public data
 }

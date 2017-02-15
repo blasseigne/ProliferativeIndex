@@ -10,16 +10,16 @@
 
 compareModeltoPI<-function(userObject, vstPI){
   dataframePIvst<-subset(userObject$vstData, rownames(userObject$vstData) %in% metaPCNA2)
-  userModelPCA<-prcomp(t(dataframePIvst), center=TRUE, scale=TRUE)
+  userModelPCA<-stats::prcomp(t(dataframePIvst), center=TRUE, scale=TRUE)
   corrTable<-data.frame(matrix(ncol=3, nrow=10))
   rownames(corrTable)<-c("PC1", "PC2", "PC3", "PC4", "PC5", "PC6", "PC7", "PC8", "PC9", "PC10")
   colnames(corrTable)<-c("SpearmanRho", "SpearmanPvalue", "PCAPropOfVariance")
   corrTable[,3]<-summary(userModelPCA)$importance[2,1:10]
   for (i in 1:10){
-    corrTest<-cor.test(userModelPCA$x[,i], vstPI, method="spearman")
+    corrTest<-stats::cor.test(userModelPCA$x[,i], vstPI, method="spearman")
     corrTable[i,1]<-corrTest$estimate
     corrTable[i,2]<-corrTest$p.value
   }
-  plot(userModelPCA$x[,1], vstPI, xlab="model PC1", ylab="PI")
+  graphics::plot(userModelPCA$x[,1], vstPI, xlab="model PC1", ylab="PI")
   return(corrTable)
 }

@@ -10,6 +10,9 @@ Description: The ProliferativeIndex package provides users with R functions for
     (DOI: https://doi.org/10.1101/063057).
 Depends:
     R (>= 3.0.0)
+Imports: 
+    graphics,
+    stats
 License: MIT + file LICENSE
 LazyData: true
 Suggests:
