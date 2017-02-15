@@ -1,6 +1,6 @@
 Package: ProliferativeIndex
 Title: Calculates PI and assesses in model
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: c(person("Brittany", "Lasseigne", role = c("aut", "cre"), 
     email = "brittany.lasseigne@gmail.com"), 
     person("Ryne", "Ramaker", role = "aut", email = "ryneramaker@gmail.com"))
