@@ -9,7 +9,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-The ProliferativeIndex R package^[Ramaker and Lasseigne, et al. biorxiv citation] provides users with R functions for calculating and analyzing the proliferative index (PI) from an RNA-seq dataset.  
+The ProliferativeIndex R package^[Ramaker and Lasseigne, et al. bioRxiv, 2016.] provides users with R functions for calculating and analyzing the proliferative index (PI) from an RNA-seq dataset.  
 
 The PI was adapted from Venet, et al.^[Venet, et al. PLoS Computational Biology, 2011 and Ge, et al. Genomics, 2005.]:
 
@@ -34,15 +34,15 @@ After first loading the ProliferativeIndex library:
 ```{r, include=TRUE}
 library(ProliferativeIndex)
 ```
-This dataset, `vstTCGA_ACCData` can be accessed from the package:
+This dataset, `vstTCGA_ACCData_sub` can be accessed from the package:
 ```{r, include=TRUE}
-data(vstTCGA_ACCData)
+data(vstTCGA_ACCData_sub)
 
-#Examine only the first few columns and rows because the dataset is large (20501 genes x 79 samples):
-dim(vstTCGA_ACCData)
+#Examine only the first few columns and rows because the dataset is large (20501 genes x 10 samples):
+dim(vstTCGA_ACCData_sub)
 #Note that sample IDs are column names and HGNC gene IDs (http://www.genenames.org) are rownames and that vst data is numeric.
-str(vstTCGA_ACCData)
-knitr::kable(vstTCGA_ACCData[1:5,1:5])
+str(vstTCGA_ACCData_sub)
+knitr::kable(vstTCGA_ACCData_sub[1:5,1:5])
 ```
 
 ## readDataForPI function
@@ -53,12 +53,13 @@ The function `readDataForPI` is used to read data in for use with the Proliferat
 
 ```{r, include=TRUE}
 #Inputs are the user's vst dataframe and a model of interest for examining PI:
-exampleTCGAData<-readDataForPI(vstTCGA_ACCData, c("AIFM3", "ATP9B", "CTRC", "MCL1", "MGAT4B", "ODF2L", "SNORA65", "TPPP2"))
+exampleTCGAData<-readDataForPI(vstTCGA_ACCData_sub, c("AIFM3", "ATP9B", "CTRC", "MCL1", "MGAT4B", "ODF2L", "SNORA65", "TPPP2"))
 
 #examine output which is a list of two objects:
 # exampleTCGAData$vstData is the user's vst dataframe and exampleTCGAData$modelIDs is a character string of the user's gene IDs for their model of interest
 str(exampleTCGAData)
 ```
+*note, the R package includes a data object, 'exReadDataObj' that is the output from the readDataForPI function for comparison
 
 ### calculatePI function
 
@@ -73,6 +74,7 @@ summary(proliferativeIndices)
 #Examine function output:
 knitr::kable(head(proliferativeIndices))
 ```
+*note, the R package includes a data object, 'exVSTPI' that is the output from the calculatePI function for comparison
 
 ## comparePI function
 This function will summarize the PI values within the user's dataset.
@@ -80,6 +82,7 @@ This function will summarize the PI values within the user's dataset.
 ```{r, echo=FALSE, results='asis'}
 comparePI(proliferativeIndices)
 ```
+*note, the R package includes a data object, 'exVSTPI' that is the output from the calculatePI function for comparison
 
 ## compareModeltoPI function
 

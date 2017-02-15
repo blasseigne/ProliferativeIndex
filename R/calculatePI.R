@@ -5,7 +5,7 @@
 #' @param userObject Output from ProliferativeIndex readDataForPI function
 #' @export
 #' @examples
-#' calculatePI(userObject, metaPCNA)
+#' calculatePI(exReadDataObj)
 
 calculatePI<-function(userObject){
   dataframePIvst<-subset(userObject$vstData, rownames(userObject$vstData) %in% metaPCNA2)

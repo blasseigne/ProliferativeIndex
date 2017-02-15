@@ -1,11 +1,19 @@
 Package: ProliferativeIndex
 Title: Calculates PI and assesses in model
 Version: 0.0.0.9000
-Authors@R: c(person("Brittany", "Lasseigne", role = c("aut", "cre"), email = "brittany.lasseigne@gmail.com"), person("Ryne", "Ramaker", role = "aut", email = "ryneramaker@gmail.com"))
-Description: The ProliferativeIndex package provides users with R functions for calculating and analyzing the proliferative index (PI) from an RNA-seq dataset.
-Depends: R (>= 3.0.0)
+Authors@R: c(person("Brittany", "Lasseigne", role = c("aut", "cre"), 
+    email = "brittany.lasseigne@gmail.com"), 
+    person("Ryne", "Ramaker", role = "aut", email = "ryneramaker@gmail.com"))
+Description: The ProliferativeIndex package provides users with R functions for
+    calculating and analyzing the proliferative index (PI) from an RNA-seq 
+    dataset. As described in Ramaker & Lasseigne, et al. bioRxiv, 2016 
+    (DOI: https://doi.org/10.1101/063057).
+Depends:
+    R (>= 3.0.0)
 License: MIT + file LICENSE
 LazyData: true
-Suggests: knitr,
+Suggests:
+    knitr,
     rmarkdown
 VignetteBuilder: knitr
+RoxygenNote: 5.0.1

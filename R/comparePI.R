@@ -5,7 +5,7 @@
 #' @param vstPIinput Output from ProliferativeIndex calculatePI function (PI of user vst data)////////////////////////////////////////////////////////////////////////
 #' @export
 #' @examples
-#' calculatePI(vstPIinput)
+#' comparePI(exVSTPI)
 
 comparePI<-function(vstPIinput){
   print(summary(vstPIinput))

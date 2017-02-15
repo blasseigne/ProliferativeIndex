@@ -6,7 +6,8 @@
 #' @param modelIDs Genes in user identified model for comparison to proliferative index
 #' @export
 #' @examples
-#' readDataForPI(vstTCGA_ACCData, c("AIFM3", "ATP9B", "CTRC", "MCL1", "MGAT4B", "ODF2L", "SNORA65", "TPPP2"))
+#' readDataForPI(vstTCGA_ACCData_sub, c("AIFM3", "ATP9B", "CTRC", "MCL1", 
+#' "MGAT4B", "ODF2L", "SNORA65", "TPPP2"))
 
 
 readDataForPI<-function(vstData, modelIDs){

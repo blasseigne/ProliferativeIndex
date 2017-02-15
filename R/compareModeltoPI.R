@@ -6,7 +6,7 @@
 #' @param vstPI Output from ProliferativeIndex calculatePI function
 #' @export
 #' @examples
-#' compareModeltoPI(userObject, vstPI)
+#' compareModeltoPI(exReadDataObj, exVSTPI)
 
 compareModeltoPI<-function(userObject, vstPI){
   dataframePIvst<-subset(userObject$vstData, rownames(userObject$vstData) %in% metaPCNA2)
