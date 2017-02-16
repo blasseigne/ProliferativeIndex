@@ -1,0 +1,71 @@
+---
+title: "cran-comments"
+author: "Brittany N. Lasseigne"
+date: "February 16, 2017"
+output: html_document
+---
+
+<br>
+
+##Release summary
+
+<br>
+
+#### version 1.0.0, 15 Feb 2017
+This is the first CRAN release of ProliferativeIndex.
+
+<br>
+
+##### Test environments
+*local OS X install, R 3.2.1
+
+*win-builder (devel and release)
+
+<br>
+
+##### R CMD check results
+There were no ERRORs or WARNINGs
+
+There was 1 NOTE from win-builder R-devel (2017-02-15 r72187) and R-release version 3.3.2 (2016-10-31):
+`* checking CRAN incoming feasibility ... NOTE
+New submission <br>
+Possibly mis-spelled words in DESCRIPTION`
+
+*These are spelled correctly.*
+<br>
+<br>
+
+##### From CRAN submission ProliferativeIndex 1.0.0, 16 Feb 2017
+***
+>Kurt Hornik <Kurt.Hornik@wu.ac.at>
+>12:51 AM (8 hours ago)
+>
+>to me, CRAN 
+>>>>> Brittany Lasseigne writes:
+>
+>We get
+>
+>The Title field should be in title case, current version then in title case:
+>‘Calculates PI and assesses in model’
+>‘Calculates PI and Assesses in Model’
+>
+>Pls fix.  Also, pls start the Description as
+>
+> Provides functions for ...
+>
+> and write the DOI as
+>
+> <doi:10.1101/063057>
+>   
+
+*These changes have been made in the DESCRIPTION file.*
+<br>
+<br>
+
+##### R CMD check results after addressing cran comments 
+There are no ERRORs or WARNINGs
+There is the same NOTE about possibly mis-spelled words from both win-builders
+   
+
+
+

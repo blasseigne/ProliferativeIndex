@@ -1,2 +1,5 @@
-^.*\.Rproj$
+^.*\.Rproj$ 
 ^\.Rproj\.user$
+
+^cran-comments\.Rmd$
+^ProliferativeIndex\.Rproj$
