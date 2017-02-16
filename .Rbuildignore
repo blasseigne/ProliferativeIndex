@@ -3,3 +3,4 @@
 
 ^cran-comments\.Rmd$
 ^ProliferativeIndex\.Rproj$
+^\.travis\.yml$
