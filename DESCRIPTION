@@ -1,6 +1,6 @@
 Package: ProliferativeIndex
 Title: Calculates and Analyzes the Proliferative Index
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: c(person("Brittany", "Lasseigne", role = c("aut", "cre"), 
     email = "brittany.lasseigne@gmail.com"), 
     person("Ryne", "Ramaker", role = "aut", email = "ryneramaker@gmail.com"))
